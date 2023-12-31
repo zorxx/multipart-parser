@@ -8,7 +8,7 @@ endif()
 
 cmake_minimum_required(VERSION 3.0)
 set(project multipart_parser)
-project(${project} LANGUAGES C VERSION 1.0.0)
+project(${project} LANGUAGES C VERSION 1.0.1)
 
 add_library(${project} SHARED multipart_parser.c)
 set_target_properties(${project} PROPERTIES PUBLIC_HEADER "multipart_parser.h")
