@@ -1,5 +1,9 @@
 ## Multipart form data parser
 
+Source for this project lives at [https://github.com/zorxx/multipart-parser](https://github.com/zorxx/multipart-parser)
+
+This project was forked from the repository [https://github.com/iafonov/multipart-parser-c](https://github.com/iafonov/multipart-parser-c)
+
 ### Features
 * No dependencies
 * Works with chunks of a data - no need to buffer the whole request
@@ -10,6 +14,21 @@ Tested as part of [Cosmonaut](https://github.com/iafonov/cosmonaut) HTTP server.
 Implementation based on [node-formidable](https://github.com/felixge/node-formidable) by [Felix Geisendörfer](https://github.com/felixge).
 
 Inspired by [http-parser](https://github.com/joyent/http-parser) by [Ryan Dahl](https://github.com/ry).
+
+### Building and installing
+Build, using CMake (and gnumake):
+```bash
+mkdir build; cd build
+cmake ..
+make -j`nproc`
+sudo make install
+``` 
+
+### ESP-IDF
+Add this component to an esp-idf project with the following command:
+```bash
+idf.py add-dependency "zorxx/multipart-parser"
+```
 
 ### Usage (C)
 This parser library works with several callbacks, which the user may set up at application initialization time.
@@ -96,3 +115,6 @@ private:
 * [Jay Miller](http://www.cryptofreak.org)
 
 © 2012 [Igor Afonov](http://iafonov.github.com)
+© 2023 [Zorxx Software](http://zorxx.com)
+
+See `LICENSE` file in this repository for license details.
